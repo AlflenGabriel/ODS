@@ -1,0 +1,31 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 10vw);
+  grid-gap: 15px;
+}
+
+.gallery > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes pulse {
+  from,
+  to {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.08;
+  }
+}
+
+.gallery > img:hover {
+  animation: pulse 800ms ease-in-out;
+}
+
+.img {
+  overflow: hidden;
+}
